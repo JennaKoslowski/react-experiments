@@ -1,7 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 /*<link //says to add in for boostrap but I think it's working without
@@ -55,7 +54,4 @@ function MyVerticallyCenteredModal(props) {
     );
   }
   
-  ReactDOM.render(
-    <App />,
-    document.getElementById('root')
-  );
+ export default Modal;

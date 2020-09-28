@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+//import Modal from './Modal';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 function Square(props){
       return (
@@ -102,6 +105,26 @@ function Square(props){
 
       if(winner){
         status = "Winner: " + winner;
+        return <Modal
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter">
+           Winner
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <h4>WINNER</h4>
+          <p>
+           Congratulations Player (this.state.xIsNext ? 'X' : 'O'). You won!
+          </p>
+        </Modal.Body>
+        <Modal.Footer>
+         {/*<Button onClick={onHide}>Close</Button>*/}
+        </Modal.Footer>
+      </Modal>
       }
       else {
         status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O')
